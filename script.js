@@ -62,7 +62,7 @@ columns.forEach(column => {column.addEventListener("mouseout", function(e){
     switchColors();
     if(e.target){
         let coins = e.target.children;
-        coins[0].style.backgroundColor = "white";
+        coins[0].style.backgroundColor = "none";
             }
         });
     });
@@ -80,7 +80,7 @@ topCoins.forEach(topCoin => {topCoin.addEventListener("mouseout", function(e){
     switchColors();
     if(e.target){
         let coins = e.target;
-        coins.style.backgroundColor = "white";
+        coins.style.backgroundColor = "none";
             }
         });
     });
@@ -98,7 +98,7 @@ playedCoins.forEach(playedCoin => {playedCoin.addEventListener("mouseout", funct
     switchColors();
     if(e.target){
         let coins = e.target.parentNode.children;
-        coins[0].style.backgroundColor = "white";
+        coins[0].style.backgroundColor = "none";
             }
         });
     });
