@@ -48,6 +48,7 @@ main{
      height: 70px;
      box-shadow: -2px -2px 1px 1px rgba(239, 239, 239, 0.326);
      transition: all .15s;
+     background-color: black;
  }
  
  .row{
