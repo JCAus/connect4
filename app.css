@@ -2,11 +2,13 @@ main{
     display:flex;
     justify-content: center; 
     transition: all .5s;
+    background-color: black;
  }
  
  #field{
      display: flex;
      justify-content: center;
+     background-color: black;
  }
  
  #bgImg{
@@ -25,6 +27,7 @@ main{
      height: 525px;
      top:130px;
      cursor: pointer;
+     background-color: blue;
  }
  
  .col{
@@ -38,7 +41,7 @@ main{
      border:1px solid rgb(255, 0, 255, 0);
      border-radius: 50%;
      height: 70px;
-     box-shadow: -2px -2px 1px 1px rgb(0, 0, 0, .1);
+     box-shadow: -2px -2px 1px 1px rgba(239, 239, 239, 0.326);
      transition: all .15s;
  }
  
@@ -53,8 +56,8 @@ main{
      top: 26px;
      right: 4px;
      transition: all .2s;
-     background-color: rgb(255, 255, 255, .4);
-     box-shadow: 3px 3px rgba(1, 5, 122, 0.563);
+     background-color: rgb(255, 255, 255);
+     box-shadow: 3px 3px rgba(59, 65, 237, 0.763);
  }
  
  .win{
@@ -72,6 +75,7 @@ main{
      font-size: 4.5em;
      font-weight: bold;
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     color: aliceblue;
  }
  
  .playBtn{
@@ -79,8 +83,8 @@ main{
      top: 92px;
      left: 742px;
      border: none;
-     background-color: black;
-     color: aliceblue;
+     background-color: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
      font-weight: 800;
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
      border-radius: 3px;
@@ -91,9 +95,9 @@ main{
  }
  
  .playBtn:hover{
-     border: 2px solid black;
-     background-color: white;
-     color:black;
+     border: 2px solid rgb(255, 255, 255);
+     background-color: rgb(0, 0, 0);
+     color:rgb(255, 255, 255);
      cursor: pointer;
  }
  
@@ -102,8 +106,8 @@ main{
      top: 92px;
      left: 825px;
      border: none;
-     background-color: black;
-     color: aliceblue;
+     background-color: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
      font-weight: 800;
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
      border-radius: 3px;
@@ -115,16 +119,16 @@ main{
  }
  
  .replayBtn:hover{
-     border: 2px solid black;
-     background-color: white;
-     color:black;
+     border: 2px solid rgb(255, 255, 255);
+     background-color: rgb(0, 0, 0);
+     color:rgb(255, 255, 255);
      cursor: pointer;
  }
  
  .yellowWins{
      position: absolute;
      color: yellow;
-     -webkit-text-stroke: black 2px;
+     -webkit-text-stroke: rgb(255, 255, 255) 2px;
      font-size: 10em;
      left: 180px;
      top: 300px;
@@ -135,7 +139,7 @@ main{
      position: absolute;
      position: absolute;
      color: red;
-     -webkit-text-stroke: black 2px;
+     -webkit-text-stroke: rgb(255, 255, 255) 2px;
      font-size: 10em;
      right: 180px;
      top: 300px;
