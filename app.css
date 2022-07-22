@@ -27,7 +27,7 @@ main{
      height: 525px;
      top:130px;
      cursor: pointer;
-     background-color: blue;
+     background-color: rgb(25, 52, 255);
  }
  
  .col{
