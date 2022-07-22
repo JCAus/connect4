@@ -62,7 +62,7 @@ columns.forEach(column => {column.addEventListener("mouseout", function(e){
     switchColors();
     if(e.target){
         let coins = e.target.children;
-        coins[0].style.backgroundColor = "none";
+        coins[0].style.backgroundColor = "black";
             }
         });
     });
@@ -80,7 +80,7 @@ topCoins.forEach(topCoin => {topCoin.addEventListener("mouseout", function(e){
     switchColors();
     if(e.target){
         let coins = e.target;
-        coins.style.backgroundColor = "none";
+        coins.style.backgroundColor = "black";
             }
         });
     });
@@ -98,7 +98,7 @@ playedCoins.forEach(playedCoin => {playedCoin.addEventListener("mouseout", funct
     switchColors();
     if(e.target){
         let coins = e.target.parentNode.children;
-        coins[0].style.backgroundColor = "none";
+        coins[0].style.backgroundColor = "black";
             }
         });
     });
@@ -439,7 +439,7 @@ function isWin(arr){
                 
                 arr.forEach(val =>{
                     val.classList.remove('win')
-                    val.style.backgroundColor = 'white';
+                    val.style.backgroundColor = 'black';
                     val.innerText = '';
                     
                 });
