@@ -17,6 +17,8 @@ let ee = 1;
 let f = 1;
 let g = 1;
 
+
+
 let yellowScore = document.querySelector('.yellowWins');
 let redScore = document.querySelector('.redWins');
 yellowScore.innerHTML = yellowWins;
@@ -225,6 +227,7 @@ function dropCoinSib(e){
         g++;
     };
     checkForTie();
+    isWin(playedCoins);
 }
 
 //Keeps track of whose turn it is
@@ -424,35 +427,9 @@ function isWin(arr){
         playedCoins.forEach(playedCoin => {playedCoin.removeEventListener("click", dropCoinSib)});
         playBtn.removeEventListener('click', playGame)
 
-        const field = document.querySelector('#field');
-        let replayBtn = document.createElement('button');
-        replayBtn.setAttribute('class', 'replayBtn');
-        replayBtn.classList.add('replayBtn:hover');
-        replayBtn.innerText = 'REPLAY?';
-        field.appendChild(replayBtn);
         
-        replayBtn.addEventListener('click', function(e){
-            if(e.target){
-                
-                columns.forEach(column => {column.addEventListener("click", dropCoinChild)});
-                topCoins.forEach(topCoin => {topCoin.addEventListener("click", dropCoinSib)});
-                playedCoins.forEach(playedCoin => {playedCoin.addEventListener("click", dropCoinSib)});
-                
-                arr.forEach(val =>{
-                    val.classList.remove('win')
-                    val.style.backgroundColor = rgb(255,255,255,.4);
-                    val.innerText = '';
-                    
-                });
-                count = 0;
-                a = 1;
-                b = 1;
-                c = 1;
-                d = 1;
-                ee = 1;
-                f = 1;
-                g = 1;
-                    }});
+        
+        
             }
             
             else{ return;} 
@@ -467,9 +444,44 @@ function checkForTie(){
         alert("The game ends in a tie! Click 'REPLAY' to play again");
         location.reload();
             }
+    else{return;}
     
 }
 
+const field = document.querySelector('#field');
+        let replayBtn = document.createElement('button');
+        replayBtn.setAttribute('class', 'replayBtn');
+        replayBtn.classList.add('replayBtn:hover');
+        replayBtn.innerText = 'REPLAY?';
+        field.appendChild(replayBtn);
+
+replayBtn.addEventListener('click', restart)
+
+//This function allows the play
+function restart(e){
+    if(e.target.classList.contains('replayBtn')){
+    columns.forEach(column => {column.addEventListener("click", dropCoinChild)});
+    topCoins.forEach(topCoin => {topCoin.addEventListener("click", dropCoinSib)});
+    playedCoins.forEach(playedCoin => {playedCoin.addEventListener("click", dropCoinSib)});
+    
+    
+    
+    let spots = Array.from(document.querySelectorAll('.row'));
+    spots.forEach(spot => {
+        spot.style.backgroundColor = "rgb(255,255,255,.4)";
+        spot.classList.remove('win');
+        spot.innerText = '';
+    });
+    count = 0;
+    a = 1;
+    b = 1;
+    c = 1;
+    d = 1;
+    ee = 1;
+    f = 1;
+    g = 1;
+    }
+}
 //score keeper
 function changeScore(arr){
     arr.forEach(val=>{if(val.classList.contains('win')){
@@ -484,4 +496,3 @@ function changeScore(arr){
             
         }
     }})}}
-
