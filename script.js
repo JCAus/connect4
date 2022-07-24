@@ -440,7 +440,7 @@ function isWin(arr){
                 
                 arr.forEach(val =>{
                     val.classList.remove('win')
-                    val.style.backgroundColor = 'white';
+                    val.style.backgroundColor = rgb(255,255,255,.4);
                     val.innerText = '';
                     
                 });
