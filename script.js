@@ -180,6 +180,7 @@ function dropCoinChild(e){
     checkUpDiagWin(columns, 3, 7, 7);
     
     changeScore(playedCoins);
+    checkForTie();
     isWin(playedCoins);
     
 }
@@ -223,7 +224,7 @@ function dropCoinSib(e){
         lastChildG.style.backgroundColor = color;
         g++;
     };
-    
+    checkForTie();
 }
 
 //Keeps track of whose turn it is
@@ -457,6 +458,18 @@ function isWin(arr){
             else{ return;} 
         }
 
+
+function checkForTie(){
+    if(playedCoins.every(coin =>{
+        return coin.style.backgroundColor === 'red' || coin.style.backgroundColor === 'yellow';
+        
+    })){
+        alert("The game ends in a tie! Click 'REPLAY' to play again");
+        location.reload();
+            }
+    
+}
+
 //score keeper
 function changeScore(arr){
     arr.forEach(val=>{if(val.classList.contains('win')){
@@ -470,10 +483,4 @@ function changeScore(arr){
             redScore.innerText = redWins/4;
             
         }
-    }})
-    
-}
-}
-
-    
-
+    }})}}
